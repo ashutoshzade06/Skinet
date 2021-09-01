@@ -16,15 +16,15 @@ basket$!: Observable<IBasket>;
     this.basket$=this.basketService.basket$;
   }
 
-  removeBasketItem(item:IBasketItem){
+  removeBasketItem(item: IBasketItem){
     this.basketService.removeItemFromBasket(item);
   }
 
-  incrementItemQuantity(item:IBasketItem){
+  incrementItemQuantity(item: IBasketItem){
     this.basketService.incrementItemQuantity(item);
   }
  
-  decrementItemQuantity(item:IBasketItem){
+  decrementItemQuantity(item: IBasketItem){
     this.basketService.decrementItemQuantity(item);
   }
 

@@ -22,15 +22,17 @@ namespace API.Helpers
             CreateMap<OrderItem,OrderItemDto>();
             CreateMap<Order,OrderToReturnDto>()
             .ForMember(d=>d.DeliveryMethod,o=>o.MapFrom(s=>s.DeliveryMethod.ShortName))
-            .ForMember(d=>d.ShippingPrice,o=>o.MapFrom(s=>s.DeliveryMethod.Price));
+            .ForMember(d=>d.ShippingPrice,o=>o.MapFrom(s=>s.DeliveryMethod.Price)); 
+             // this is done to get foreign key data from brand and type table and show there names . here 
+            //d is destination and s is source
+            
             CreateMap<OrderItem,OrderItemDto>()
             .ForMember(d=>d.ProductId,o=>o.MapFrom(s=>s.ItemOrdered.ProductItemId))
             .ForMember(d=>d.ProductName,o=>o.MapFrom(s=>s.ItemOrdered.ProductName))
             .ForMember(d=>d.PictureUrl,o=>o.MapFrom(s=>s.ItemOrdered.PictureUrl))
             .ForMember(d=>d.PictureUrl,o=>o.MapFrom<OrderItemUrlResolver>());
 
-            // this is done to get foreign key data from brand and type table and show there names . here 
-            //d is destination and s is source
+          
         }
     }
 }
