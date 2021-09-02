@@ -2,4 +2,8 @@
     <div class=""> <i class="fa fa-check-circle fa-5x" style="color:green;"></i></div>
     <h2>Thank,You. Your order is Confirmed</h2>
     <p class="mb-4">Your Order not shipped yet,but this is to be expected as we are a real store!</p>
+<button class="btn btn-outline-success" *ngIf="order" routerLink="/orders/{{order?.id}}" class="btn btn-outline-success">View Order</button>
+<button class="btn btn-outline-success" *ngIf="!order" routerLink="/orders" class="btn btn-outline-success">View Your Orders</button>
+
+
 </div>

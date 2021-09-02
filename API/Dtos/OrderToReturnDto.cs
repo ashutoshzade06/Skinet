@@ -8,7 +8,7 @@ namespace API.Dtos
     {
         
         public int Id { get; set; }
-                public string BuyerEmail { get; set; }
+        public string BuyerEmail { get; set; }
 
         public DateTimeOffset OrderDate { get; set; }
 
@@ -18,7 +18,7 @@ namespace API.Dtos
 
         public decimal ShippingPrice { get; set; }
 
-        public IReadOnlyList<OrderItemDto> OrderItem { get; set; }
+        public IReadOnlyList<OrderItemDto> OrderItems { get; set; }
 
         public decimal Subtotal { get; set; }
         public decimal  Total { get; set; }

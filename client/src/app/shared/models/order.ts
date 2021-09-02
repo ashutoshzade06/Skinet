@@ -1,4 +1,4 @@
-import { IAddress } from './address';
+import { IAddress } from "./address";
 
 export interface IOrderToCreate {
     basketId: string;
@@ -17,6 +17,7 @@ export interface IOrder {
     subtotal: number;
     total: number;
     status: string;
+    
 }
 
 export interface IOrderItem {
